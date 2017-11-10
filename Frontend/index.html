@@ -1,24 +1,142 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Hello, world!</title>
+
+<head>
+    <title>User Profile</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <section class="client">
-        <h1>Тут будет личный кабинет с инфой по токенам</h1>
-    </section>
+</head>
 
+<body>
+    <section class="client">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10">
+                    <h2>Личный кабинет</h2></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <!--left col-->
+                    <ul class="list-group">
+                        <li class="list-group-item text-muted">Профиль</li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong>Имя</strong></span> Демо</li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong>Почта</strong></span> Почта</li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong>Телефон</strong></span> +36669992</li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong>Дата создания </strong></span>10/11/2017</li>
+                    </ul>
+                </div>
+                <!--/col-3-->
+                <div class="col-sm-9">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#home" data-toggle="tab">_______1_______</a></li>
+                        <li><a href="#messages" data-toggle="tab"> ----- 2 ----- </a></li>
+                        <li><a href="#settings" data-toggle="tab">_______3_______</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Дата транзакции</th>
+                                            <th>Кошелек валюты А</th>
+                                            <th>Кошелек валюты Б</h>
+                                                <th>Статус транзакции</th>
+                                                <th>Номер транзакции</th>
+                                                <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="items">
+                                        <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle ">
+                                            <td>10.11.2017</td>
+                                            <td>1111111111</td>
+                                            <td>2222222222</td>
+                                            <td>Проведена</td>
+                                            <td>1</td>
+                                            <td>
+                                                <button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="btn btn-warning btn-sm">Подробнее</button>
+                                            </td>
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6 col-md-offset-4 text-center">
+                                        <ul class="pagination" id="myPager"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/table-resp-->
+                            <div id="edit" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header"><h4 class="modal-title">1</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                            <input id="fn" type="text" class="form-control" name="fname" placeholder="1">
+                                            <input id="ln" type="text" class="form-control" name="fname" placeholder="2">
+                                            <input id="mn" type="text" class="form-control" name="fname" placeholder="3">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="up" class="btn btn-success" data-dismiss="modal">+</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <!--/tab-pane-->
+                        <div class="tab-pane" id="messages">
+                            <h2></h2>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Дата 2</th>
+                                            <th>Еще инфа</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="items">
+                                        <tr>
+                                            <td>10.05.2017</td>
+                                            <td>инфа</td>
+                                            <td>
+                                                <button type="button" data-toggle="modal" data-target="#edit2" data-uid="1" class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--/tab-pane-->
+                        <div class="tab-pane" id="settings">
+                            
+                        </div>
+                    </div>
+                    <!--/tab-pane-->
+                </div>
+                <!--/tab-content-->
+            </div>
+            <!--/col-9-->
+        </div>
+        <!--/row-->
+        </hr>
+    </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
