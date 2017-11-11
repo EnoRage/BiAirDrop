@@ -14,7 +14,6 @@
     <!-- Добавляю API, чтобы привязать кошелёк Waves -->
     <script src="..\node_modules\waves-api\dist\waves-api.min.js"></script>
     <script src="..\node_modules\crypto-js\crypto-js.js"></script>
-    <script type="text/javascript" src="js/addWavesWallet.js"></script>
 </head>
 
 <body>
@@ -83,17 +82,17 @@
                         <div class="card card-body">
                             <div class="row">
                                 <div class="input-group">
-                                    <span class="input-group-addon">Public key</span>
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                                    <button class="btn btn-secondary" type="button">Ok</button>
+                                    <span class="input-group-addon">Private key</span>
+                                    <input type="text" class="form-control" name="privateKey" id="basic-url" aria-describedby="basic-addon3">
+                                    <button class="btn btn-secondary" name="confirmKey" onclick="Encription()" type="button">Ok</button>
                                 </div>
                                 <div style="margin-top: 15px" class="input-group">
                                     <span class="input-group-addon">Ваша строка</span>
-                                      <input readonly type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="akjfbjlwehbchjslhjdbclsjhdbcjshbzdljchblzsdjhvblzsjhdbvljzshvblbsdhjvb">
+                                      <input readonly type="text" class="form-control" id="basic-url" name="serverString" aria-describedby="basic-addon3" value="akjfbjlwehbchjslhjdbclsjhdbcjshbzdljchblzsdjhvblzsjhdbvljzshvblbsdhjvb">
                                 </div>
                                 <div style="margin-top: 15px" class="input-group">
                                     <span class="input-group-addon">Строка подтверждения</span>
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    <input type="text" class="form-control" id="basic-url" name="endKey" aria-describedby="basic-addon3">
 
                                 </div>
 
@@ -116,6 +115,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/addWavesWallet.js"></script>
     <!-- Menu Toggle Script -->
     <script>
     $("#menu-toggle").click(function(e) {
