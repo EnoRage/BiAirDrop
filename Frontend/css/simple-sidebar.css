@@ -125,3 +125,7 @@ background-color: #241320;
 box-shadow: none;
 border: #241320;
 }
+.input-group-addon{
+  background-color: #241320;
+  color: white;
+}
