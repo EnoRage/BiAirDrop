@@ -119,3 +119,9 @@ body {
     margin-right: 0;
   }
 }
+
+.btn-secondary, .btn-primary{
+background-color: #241320;
+box-shadow: none;
+border: #241320;
+}
