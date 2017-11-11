@@ -9,8 +9,12 @@ console.log(seed.keyPair); // Генерит ПРИВАТНЫЙ и ПУБЛИЧ�
 
 
 var encrypted = CryptoJS.SHA256("Привет");
-console.log(encrypted);
 
-var ciphertext = CryptoJS.AES.encrypt("Privet", 'secret key 123');
 
-// var ciphertext = CryptoJS.AES.decrypt(JSON.stringify(data), 'secret key 123');
+// Encrypt
+var ciphertext = CryptoJS.AES.encrypt(JSON.stringify('Privet'), 'secret key 123');
+
+// Decrypt
+var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), 'secret key 123');
+var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+console.log(decryptedData);
