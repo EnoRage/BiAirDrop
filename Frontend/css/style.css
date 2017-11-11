@@ -2,13 +2,17 @@ h1, a, a:active, a:hover{
   font-size: 120px;
   color: white;
   text-decoration: none;
-  background: #241320;
+
 }
 body{
   background-color: #241320;
 }
 .Hlogo{
   margin-top: 20vh;
+}
+.Hlogo1{
+  
+  background: #241320;
 }
 #particles {
     width: 100%;
@@ -45,10 +49,9 @@ body{
 
 
 
-
-
-=
-
+.bbb{
+  border-radius: 100px;
+}
 
 /*#87A800    #647D01*/
 
