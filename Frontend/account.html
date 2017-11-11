@@ -84,7 +84,11 @@
                                 <div class="input-group">
                                     <span class="input-group-addon">Private key</span>
                                     <input type="text" class="form-control" name="privateKey" id="basic-url" aria-describedby="basic-addon3">
-                                    <button class="btn btn-secondary" name="confirmKey" onclick="Encription()" type="button">Ok</button>
+                                    <!-- <button class="btn btn-secondary" name="confirmKey" onclick="Encription()" type="button">Ok</button> -->
+                                </div>
+                                <div style="margin-top: 15px"  class="input-group">
+                                    <span class="input-group-addon">Public key</span>
+                                    <input type="text" class="form-control" name="publicKey" id="basic-url" aria-describedby="basic-addon3">
                                 </div>
                                 <div style="margin-top: 15px" class="input-group">
                                     <span class="input-group-addon">Ваша строка</span>
@@ -93,12 +97,11 @@
                                 <div style="margin-top: 15px" class="input-group">
                                     <span class="input-group-addon">Строка подтверждения</span>
                                     <input type="text" class="form-control" id="basic-url" name="endKey" aria-describedby="basic-addon3">
-
                                 </div>
 
                                 <div style="margin-top: 10px;" class="col-12 text-center">
                                     <div class="btn-group">
-                                        <button data-toggle="collapse" type="submit" class="btn btn-primary">Подтвердить</button>
+                                        <button data-toggle="collapse" type="submit" onclick="Encription()" class="btn btn-primary">Подтвердить</button>
                                         <button data-toggle="collapse" aria-controls="multiCollapseExample1" type="submit" data-target="#newAccountInfo" class="btn btn-primary">Закрыть</button>
                                     </div>
                                 </div>

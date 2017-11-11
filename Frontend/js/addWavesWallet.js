@@ -14,10 +14,10 @@ function Encription() {
     
     $('input[name=endKey]').val(ciphertext.toString());                     // Показываем шифрокод в 3-й строчке              
     
-    var takeCipher = $('input[name=endKey]').val();                         // Получаем значение шифрокода
+    // var takeCipher = $('input[name=endKey]').val();                         // Получаем значение шифрокода
 
-    var bytes  = CryptoJS.AES.decrypt(takeCipher.toString(), serverString); // Дешифруем   
-    var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));      // В норм формат переводим
+    // var bytes  = CryptoJS.AES.decrypt(takeCipher.toString(), serverString); // Дешифруем   
+    // var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));      // В норм формат переводим
 
-    console.log(decryptedData);
+    // console.log(decryptedData);
     }
